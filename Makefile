@@ -43,3 +43,6 @@ out/report.txt: $(OUTPUTS)
 	@for file in $(OUTPUTS); do \
 		echo "$$file: $$(wc -l < $$file) lines" >> $@; \
 	done
+
+count: build ## count the source files
+	@ls -1 $(SRC_DIR)/*.txt | wc -l
