@@ -48,3 +48,4 @@ count: build ## report source files and built words
 	@ls -1 $(SRC_DIR)/*.txt | wc -l
 	@wc -w $(OUTPUTS) | tail -1
 
+# count: see section 5 of the README
