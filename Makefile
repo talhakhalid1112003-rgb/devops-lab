@@ -37,12 +37,6 @@ ci: clean check test ## Clean, check, build and test
 help: ## List available targets
 	@grep -E '^[a-zA-Z0-9_-]+:.*##' Makefile | sed 's/:.*##/: /'
 
-out/report.txt: $(OUTPUTS)
-	@echo "Report generated: $$(date)" > $@
-	@echo "" >> $@
-	@for file in $(OUTPUTS); do \
-		echo "$$file: $$(wc -l < $$file) lines" >> $@; \
-	done
 
 count: build ## report source files and built words
 	@ls -1 $(SRC_DIR)/*.txt | wc -l
