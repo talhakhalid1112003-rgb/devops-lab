@@ -49,3 +49,4 @@ count: build ## report source files and built words
 	@wc -w $(OUTPUTS) | tail -1
 
 # count: see section 5 of the README
+# OUTPUTS is set by the wildcard above
